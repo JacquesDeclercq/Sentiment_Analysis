@@ -5,5 +5,5 @@ wordcloud==1.8.1
 git+git://github.com/twintproject/twint.git@origin/master#egg=twint
 textblob==0.15.3
 streamlit==1.0.0
-nltk==3.6.5
 matplotlib==3.4.3
+
