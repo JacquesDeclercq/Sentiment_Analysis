@@ -1,14 +1,15 @@
 from main import *
+import pandas as pd
 import string
 import re
-import nltk
-nltk.download('stopwords')
+# import nltk
+# nltk.download('stopwords')
 from textblob import TextBlob
-from nltk.corpus import stopwords
-from nltk.stem import SnowballStemmer
+# from nltk.corpus import stopwords
+# from nltk.stem import SnowballStemmer
 import demoji
 
-stopword = nltk.corpus.stopwords.words(stopword_lang)
+#stopword = nltk.corpus.stopwords.words(stopword_lang)
 
 def clean_df(df,language):
     df = df[['id', 'username', 'tweet', 'language']].copy()
@@ -23,9 +24,9 @@ def remove_punct(text):
     text = re.sub('[0-9]+', '', text)
     return text
 
-def remove_stopwords(text):
-    text = [word for word in text if word not in stopword]
-    return text
+#def remove_stopwords(text):
+#    text = [word for word in text if word not in stopword]
+#    return text
 
 def convert_emoji(tweet):
     dict_emojis = demoji.findall(tweet)
@@ -48,7 +49,3 @@ def getAnalysis(score):
         return 'Neutral'
     else:
         return 'Positive'
-
-#df['analysis'] = df['sentiment'].apply(getAnalysis)
-# Show the dataframe
-#df_emoji.head()

@@ -1,17 +1,9 @@
-import datetime as dt
-import re
 import pandas as pd
 import streamlit as st
-from flair.data import Sentence
-from flair.models import TextClassifier
 import twint
-import re
-import string
 import preprocessing
-import nltk
 from wordcloud import WordCloud
 # visualization
-import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import style
 style.use('seaborn')
